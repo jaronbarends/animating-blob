@@ -1,0 +1,83 @@
+body {
+	background: #343;
+	font-family: sans-serif;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	text-decoration: underline;
+}
+
+.canvas {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	transform: translate(-50%, -50%);
+	transition: opacity 1500ms ease-out;
+}
+
+.canvas--is-hidden {
+	opacity: 0;
+}
+
+.blob {
+	--tlh: 0;
+	--brh: 0;
+	--tlv: 0;
+	--trv: 0;
+	--trh: 0;
+	--blh: 0;
+	--brv: 0;
+	--blv: 0;
+	--w: 0;
+	--h: 0;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-radius: var(--tlh)
+			var(--trh)
+			var(--brh)
+			var(--blh) /
+			var(--tlv)
+			var(--trv)
+			var(--brv)
+			var(--blv);
+	/* box-shadow: 0 0 0 10px white; */
+	width: --w;
+	height: --h;
+	transform: translate(-50%, -50%);
+}
+
+.blob--style-1 {
+	background: rgba(255, 255, 255, 0.6);
+	box-shadow: 0 0 10px white;
+}
+
+.blob--style-2 {
+	border: 1px solid white;
+}
+
+.blob:nth-child(1) {
+	width: 100px;
+	height: 100px;
+}
+
+.blob:nth-child(2) {
+	width: 150px;
+	height: 150px;
+	background: transparent;
+	box-shadow: none;
+}
+
+.blob:nth-child(3) {
+	width: 150px;
+	height: 150px;
+}
